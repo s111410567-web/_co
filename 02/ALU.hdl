@@ -27,20 +27,60 @@
 // if (out < 0) set ng = 1
 
 CHIP ALU {
-    IN  
-        x[16], y[16],  // 16-bit inputs        
-        zx, // zero the x input?
-        nx, // negate the x input?
-        zy, // zero the y input?
-        ny, // negate the y input?
-        f,  // compute out = x + y (if 1) or x & y (if 0)
-        no; // negate the out output?
+    IN
+        x[16], y[16],
+        zx,
+        nx,
+        zy,
+        ny,
+        f,
+        no;
 
-    OUT 
-        out[16], // 16-bit output
-        zr, // 1 if (out == 0), 0 otherwise
-        ng; // 1 if (out < 0),  0 otherwise
+    OUT
+        out[16],
+        zr,
+        ng;
 
     PARTS:
-   // Put you code here:
+
+    // zx = 1 -> x 變成 0
+    Mux16(a=x, b=false, sel=zx, out=xZero);
+
+    // nx = 1 -> x 反相
+    Not16(in=xZero, out=xNot);
+    Mux16(a=xZero, b=xNot, sel=nx, out=xFinal);
+
+    // zy = 1 -> y 變成 0
+    Mux16(a=y, b=false, sel=zy, out=yZero);
+
+    // ny = 1 -> y 反相
+    Not16(in=yZero, out=yNot);
+    Mux16(a=yZero, b=yNot, sel=ny, out=yFinal);
+
+    // f = 0 -> x & y
+    And16(a=xFinal, b=yFinal, out=andResult);
+
+    // f = 1 -> x + y
+    Add16(a=xFinal, b=yFinal, out=addResult);
+
+    // 根據 f 選 AND 或 ADD
+    Mux16(a=andResult, b=addResult, sel=f, out=fResult);
+
+    // no = 1 -> 最後結果反相
+    Not16(in=fResult, out=notResult);
+    Mux16(
+        a=fResult,
+        b=notResult,
+        sel=no,
+        out=out,
+        out[0..7]=lowBits,
+        out[8..15]=highBits,
+        out[15]=ng
+    );
+
+    // 判斷 out 是否全部都是 0
+    Or8Way(in=lowBits, out=lowOr);
+    Or8Way(in=highBits, out=highOr);
+    Or(a=lowOr, b=highOr, out=anyOne);
+    Not(in=anyOne, out=zr);
 }
