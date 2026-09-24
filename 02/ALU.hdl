@@ -42,7 +42,7 @@ CHIP ALU {
         ng;
 
     PARTS:
-
+    // Put you code here:
     // zx = 1 -> x 變成 0
     Mux16(a=x, b=false, sel=zx, out=xZero);
 
