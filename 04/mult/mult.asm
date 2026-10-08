@@ -7,3 +7,40 @@
 // (R0, R1, R2 refer to RAM[0], RAM[1], and RAM[2], respectively.)
 
 // Put your code here.
+// Mult.asm
+// Multiplies R0 and R1 and stores the result in R2.
+
+// Initialize R2 = 0
+@R2
+M=0
+
+// COUNT = R1
+@R1
+D=M
+@COUNT
+M=D
+
+(LOOP)
+    // Check whether COUNT is 0
+    @COUNT
+    D=M
+    @END
+    D;JEQ
+
+    // R2 = R2 + R0
+    @R0
+    D=M
+    @R2
+    M=D+M
+
+    // COUNT = COUNT - 1
+    @COUNT
+    M=M-1
+
+    // Repeat
+    @LOOP
+    0;JMP
+
+(END)
+    @END
+    0;JMP
