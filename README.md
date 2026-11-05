@@ -1,8 +1,6 @@
 
 # 計算機結構 — 學生作業與專案
 
-## 一、課程基本資料
-
 | 欄位 | 內容 |
 |---|---|
 | 學期 | 115 學年上學期 |
@@ -10,17 +8,4 @@
 | 學校 | 國立金門大學資訊工程系 |
 | 學號 | 111410567 |
 
-## 二、每週作業總覽
-
-
-### 每週檢驗表格
-
-| 第幾週 | 習題內容 | 有上課且準時繳交 | 補交且附上請假證明 | 作業連結 |
-|---|---|---|---|---|
-| 3 | 第 1、2 章、電路圖與邏輯公式 | 是 | X | [01](https://github.com/s111410567-web/_co/tree/main/01)、[02](https://github.com/s111410567-web/_co/tree/main/02)、[畫圖與公式](https://github.com/s111410567-web/_co/tree/main/第三週作業) |
-| 4 | 第 3 章除 PC | 是 | X | [03](https://github.com/s111410567-web/_co/tree/main/03) |
-| 5 | 第 4 章 | 是 | X | [04](https://github.com/s111410567-web/_co/tree/main/04) |
-| 6 | HackCPU 電路圖 | 是 | X | [HackCPU](https://github.com/s111410567-web/_co/blob/main/Hackcpu) |
-| 7 | 第 5 章 | 是 | X | [05](https://github.com/s111410567-web/_co/tree/main/05) |
-| 8 | EDA 軟體報告 | 是 | X | [第八週作業](https://github.com/s111410567-web/_co/tree/main/第八週作業) |
 
