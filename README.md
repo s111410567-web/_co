@@ -12,13 +12,15 @@
 
 ## 二、每週作業總覽
 
-| 週次 | 作業內容 | GitHub 連結 |
-|---|---|---|
-| 第三週 | 第 1、2 章 HDL 電路設計 | [第 1 章](./01/) / [第 2 章](./02/) |
-| 第三週 | 電路圖與邏輯公式 | [第三週畫圖公式](./第三週作業/) |
-| 第四週 | 第 3 章循序邏輯電路 | [第 3 章](./03/) |
-| 第五週 | 第 4 章 Hack 組合語言 | [第 4 章](./04/) |
-| 第六週 | Hack CPU 電路架構圖 | [Hack CPU 作業](./Hackcpu) |
-| 第七週 | 第 5 章 CPU、Memory、Computer | [第 5 章](./05/) |
-| 第八週 | IC EDA 軟體報告 | [第八週作業](./第八週作業/) |
+
+### 每週檢驗表格
+
+| 第幾週 | 習題內容 | 有上課且準時繳交 | 補交且附上請假證明 | 作業連結 |
+|---|---|---|---|---|
+| 3 | 第 1、2 章、電路圖與邏輯公式 | 是 | X | [01](https://github.com/s111410567-web/_co/tree/main/01)、[02](https://github.com/s111410567-web/_co/tree/main/02)、[畫圖與公式](https://github.com/s111410567-web/_co/tree/main/第三週作業) |
+| 4 | 第 3 章除 PC | 是 | X | [03](https://github.com/s111410567-web/_co/tree/main/03) |
+| 5 | 第 4 章 | 是 | X | [04](https://github.com/s111410567-web/_co/tree/main/04) |
+| 6 | HackCPU 電路圖 | 是 | X | [HackCPU](https://github.com/s111410567-web/_co/blob/main/Hackcpu) |
+| 7 | 第 5 章 | 是 | X | [05](https://github.com/s111410567-web/_co/tree/main/05) |
+| 8 | EDA 軟體報告 | 是 | X | [第八週作業](https://github.com/s111410567-web/_co/tree/main/第八週作業) |
 
